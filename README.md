@@ -23,7 +23,7 @@ npm run start:dev
 
 #### Homepage URL
 ```
-http://localhost:7300/
+http://localhost:7300/api/v1/home
 ```
 
 ## Architecture
