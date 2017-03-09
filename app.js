@@ -5,6 +5,7 @@ import logger from 'morgan'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import index from './routes/index'
+import EventbriteAPI from './routes/eventbrite'
 
 const app = express()
 
@@ -15,6 +16,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/api/v1', index)
+app.use('/api/v1/EventbriteAPI', EventbriteAPI)
 
 app.use(function(request, response, next) {
   const error = new Error('Not Found')
